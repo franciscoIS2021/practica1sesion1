@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class MiServlet
  */
-@WebServlet("/index.html")
+@WebServlet("/MiServlet")
 public class MiServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
