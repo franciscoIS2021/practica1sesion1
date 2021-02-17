@@ -31,32 +31,17 @@ public class MiServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		//Especificamos formato de respuesta
-		PrintWriter salida= response.getWriter();
-		
-		//Generamos la respuesta de la petición
-		
-		// Mostramos las cabeceras enviadas 
-		// en la peticion
-
-		salida.println ("<html>");
-		salida.println ("<body>");	
-		salida.println ("<h1>Cabeceras</h1>");
-		salida.println ("<br>");
 
 		Enumeration cabeceras = request.getHeaderNames();
 
 		while (cabeceras.hasMoreElements())
 		{		
 			String nombre = (String)(cabeceras.nextElement());
-			salida.println ("Nombre: " + nombre + 
+			System.out.println ("Nombre: " + nombre + 
 			   ", Valor: " + request.getHeader(nombre));
-			salida.println ("<br><br>");
+			
 		}
 
-		salida.println ("</body>");			
-		salida.println ("</html>");
 	}
 
 	/**
